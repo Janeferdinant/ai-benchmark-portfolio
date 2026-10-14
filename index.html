@@ -16,15 +16,12 @@
   <header class="site-header" id="site-header">
     <div class="header-container">
       <div class="brand-identity">
-        <div class="avatar-badge" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 3v18h18"/>
-            <path d="m19 9-5 5-4-4-3 3"/>
-          </svg>
+        <div class="avatar-badge" aria-hidden="true" style="padding: 0; overflow: hidden; border: 2px solid var(--accent-cyan);">
+          <img src="assets/photo.png" alt="Jane Rose Ferdinant" style="width: 100%; height: 100%; object-fit: cover; display: block;">
         </div>
         <div class="brand-text">
-          <span class="brand-name">Jane Rose</span>
-          <span class="brand-role">Subject Matter Expert • AI Benchmarking & Statistical Analysis</span>
+          <span class="brand-name">Jane Rose Ferdinant</span>
+          <span class="brand-role">Subject Matter Expert • AI Benchmarking & Statistical Analysis | M.Tech (CUSAT)</span>
         </div>
       </div>
 
@@ -35,6 +32,7 @@
           <li><a href="#elo-matrix" class="nav-link">Pairwise Elo & Bias</a></li>
           <li><a href="#simulator" class="nav-link">Statistical Simulator</a></li>
           <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+          <li><a href="#foundational-ai" class="nav-link">Foundational AI</a></li>
           <li><a href="#skills" class="nav-link">Methodology & Skills</a></li>
         </ul>
       </nav>
@@ -75,32 +73,71 @@
   <section class="hero-section" id="hero">
     <div class="hero-background-glow" aria-hidden="true"></div>
     <div class="container">
-      <div class="hero-pill">
-        <span class="pulse-indicator"></span>
-        <span class="pill-text">AI Benchmark & Statistical Data Specialist • Available for Remote Roles</span>
-      </div>
-      
-      <h1 class="hero-title">
-        Evaluating Frontier AI Models with <span class="gradient-text">Statistical Rigor</span> & Actionable Visual Insights
-      </h1>
+      <div class="hero-split-grid">
+        <!-- Hero Left Column -->
+        <div class="hero-left-content">
+          <div class="hero-pill">
+            <span class="pulse-indicator"></span>
+            <span class="pill-text">Assistant Professor @ SNMIMT • AI Benchmark & Statistical SME</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Evaluating Frontier AI Models with <span class="gradient-text">Statistical Rigor</span> & Actionable Visual Insights
+          </h1>
 
-      <p class="hero-description">
-        Specialized in statistical benchmark validation, error distribution auditing, test set contamination forensics, and translating complex multi-dimensional LLM performance metrics into clear decisions for engineering and executive leadership.
-      </p>
+          <p class="hero-description">
+            <strong>Jane Rose Ferdinant</strong> — M.Tech in Software Systems (CUSAT), Assistant Professor of AI & Deep Learning, and Published IEEE Researcher. Specialized in statistical benchmark validation, error distribution auditing, test set contamination forensics, and translating multi-dimensional LLM performance metrics into clear decisions for engineering and executive leadership.
+          </p>
 
-      <!-- Primary Action Buttons -->
-      <div class="hero-actions">
-        <a href="Jane_Rose_AI_Benchmark_Portfolio.pdf" download="Jane_Rose_AI_Benchmark_Portfolio.pdf" class="btn-primary" id="hero-btn-download-pdf">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-          Download PDF Dossier
-        </a>
-        <a href="https://ai-benchmark-portfolio.vercel.app/Jane_Rose_AI_Benchmark_Portfolio.pdf" target="_blank" rel="noopener noreferrer" class="btn-outline" id="hero-btn-view-pdf">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-          View Deployed PDF Online
-        </a>
-        <a href="#benchmarks" class="btn-ghost">
-          Explore Interactive Benchmarks ↓
-        </a>
+          <!-- Primary Action Buttons -->
+          <div class="hero-actions">
+            <a href="Jane_Rose_AI_Benchmark_Portfolio.pdf" download="Jane_Rose_AI_Benchmark_Portfolio.pdf" class="btn-primary" id="hero-btn-download-pdf">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              Download PDF Dossier
+            </a>
+            <a href="https://ai-benchmark-portfolio.vercel.app/Jane_Rose_AI_Benchmark_Portfolio.pdf" target="_blank" rel="noopener noreferrer" class="btn-outline" id="hero-btn-view-pdf">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+              View Online PDF
+            </a>
+            <a href="#benchmarks" class="btn-ghost">
+              Explore Benchmarks ↓
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Profile Card -->
+        <div class="hero-right-profile">
+          <div class="hero-profile-card">
+            <div class="profile-avatar-frame">
+              <img src="assets/photo.png" alt="Jane Rose Ferdinant" class="profile-avatar-img">
+            </div>
+            <h2 class="profile-card-name">Jane Rose Ferdinant</h2>
+            <p class="profile-card-title">AI Benchmark & Statistical Analysis SME</p>
+            
+            <div class="profile-badges-row">
+              <span class="profile-badge-pill">M.Tech (CUSAT)</span>
+              <span class="profile-badge-pill">SNMIMT Faculty</span>
+              <span class="profile-badge-pill">IEEE Published</span>
+              <span class="profile-badge-pill">Ex-Technovalley</span>
+            </div>
+
+            <!-- PDF Download Links Direct Group -->
+            <div class="profile-downloads-group">
+              <a href="Jane_Rose_AI_Benchmark_Portfolio.pdf" download="Jane_Rose_AI_Benchmark_Portfolio.pdf" class="doc-download-link" title="Download AI Benchmark Portfolio Dossier">
+                <span class="doc-type">📄 AI Benchmark Dossier (PDF)</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              </a>
+              <a href="assets/Jane_Rose_Ferdinant_CV.pdf" download="Jane_Rose_Ferdinant_CV.pdf" class="doc-download-link" title="Download Complete Academic & Industry CV">
+                <span class="doc-type">📋 Academic & Industry CV (PDF)</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              </a>
+              <a href="assets/Jane_Rose_Ferdinant_Single_Page_Resume.pdf" download="Jane_Rose_Ferdinant_Single_Page_Resume.pdf" class="doc-download-link" title="Download 1-Page Executive Resume">
+                <span class="doc-type">📑 Single-Page Resume (PDF)</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Key Impact Metrics Banner -->
@@ -555,14 +592,128 @@
     </div>
   </section>
 
+  <!-- Section: Foundational Applied AI & Data Science Portfolio -->
+  <section class="content-section" id="foundational-ai">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag badge-purple">Applied AI & Computer Vision Portfolio</div>
+        <h2 class="section-title">Foundational Machine Learning & Data Science Engineering</h2>
+        <p class="section-subtitle">
+          Core engineering and applied research portfolio developed by Jane Rose Ferdinant across deep learning architectures, agricultural computer vision, medical imaging, financial risk modeling, and business intelligence.
+        </p>
+      </div>
+
+      <div class="foundational-grid-container">
+        <!-- Project 1: Pepper Vision -->
+        <article class="foundational-project-card">
+          <div class="foundational-img-wrap">
+            <img src="assets/pepper_vision.jpg" alt="Harvestable Black Pepper Recognition" class="foundational-img">
+          </div>
+          <div class="foundational-body">
+            <span class="foundational-category" style="color: #10b981;">Computer Vision • Published IEEE Research</span>
+            <h3 class="foundational-title">Harvestable Black Pepper Recognition</h3>
+            <p class="foundational-desc">
+              Customized ResNet50 deep learning model to detect and classify ripeness stages of harvestable black pepper berries in agricultural field environments. Published in <em>IEEE Xplore / ICACC 2019</em>.
+            </p>
+            <div class="foundational-tags">
+              <span class="foundational-tag">ResNet50</span>
+              <span class="foundational-tag">OpenCV</span>
+              <span class="foundational-tag">Deep Learning</span>
+              <span class="foundational-tag">Precision Ag</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Stock Market Prediction -->
+        <article class="foundational-project-card">
+          <div class="foundational-img-wrap">
+            <img src="assets/stock_prediction.jpg" alt="Stock Market Prediction" class="foundational-img">
+          </div>
+          <div class="foundational-body">
+            <span class="foundational-category" style="color: #06b6d4;">Time Series • Financial Risk Modeling</span>
+            <h3 class="foundational-title">Stock Market & Volatility Forecasting</h3>
+            <p class="foundational-desc">
+              Long Short-Term Memory (LSTM) recurrent networks coupled with Deep Reinforcement Learning for financial time-series forecasting, risk modeling, and trading strategy simulation.
+            </p>
+            <div class="foundational-tags">
+              <span class="foundational-tag">LSTM</span>
+              <span class="foundational-tag">Deep RL</span>
+              <span class="foundational-tag">Time Series</span>
+              <span class="foundational-tag">Python</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: COVID-19 Pneumonia Detection -->
+        <article class="foundational-project-card">
+          <div class="foundational-img-wrap">
+            <img src="assets/pneumonia_xray.jpg" alt="COVID-19 Pneumonia Detection" class="foundational-img">
+          </div>
+          <div class="foundational-body">
+            <span class="foundational-category" style="color: #f59e0b;">Medical AI • Diagnostic Imaging</span>
+            <h3 class="foundational-title">COVID-19 & Pneumonia Automated Detection</h3>
+            <p class="foundational-desc">
+              Convolutional Neural Network (CNN) with transfer learning for rapid, automated pneumonia opacity detection and lung lesion classification from digital chest X-ray radiographs.
+            </p>
+            <div class="foundational-tags">
+              <span class="foundational-tag">CNN</span>
+              <span class="foundational-tag">Transfer Learning</span>
+              <span class="foundational-tag">Medical AI</span>
+              <span class="foundational-tag">PyTorch</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: E-Commerce Recommender -->
+        <article class="foundational-project-card">
+          <div class="foundational-img-wrap">
+            <img src="assets/ecommerce_recommender.jpg" alt="E-Commerce Recommendation" class="foundational-img">
+          </div>
+          <div class="foundational-body">
+            <span class="foundational-category" style="color: #38bdf8;">Recommendation Systems • Collaborative Filtering</span>
+            <h3 class="foundational-title">E-Commerce Personalization Engine</h3>
+            <p class="foundational-desc">
+              Collaborative filtering and matrix factorization recommendation engine built with Scikit-Learn to improve product discovery, user engagement, and personalized conversion rates.
+            </p>
+            <div class="foundational-tags">
+              <span class="foundational-tag">Collaborative Filtering</span>
+              <span class="foundational-tag">Matrix Factorization</span>
+              <span class="foundational-tag">Scikit-Learn</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: Interactive BI Dashboards -->
+        <article class="foundational-project-card">
+          <div class="foundational-img-wrap">
+            <img src="assets/interactive_dashboard.jpg" alt="Interactive Dashboards" class="foundational-img">
+          </div>
+          <div class="foundational-body">
+            <span class="foundational-category" style="color: #e7c58b;">Business Intelligence • KPI Tracking</span>
+            <h3 class="foundational-title">Executive BI & Analytics Dashboards</h3>
+            <p class="foundational-desc">
+              Multi-source data pipelines feeding executive dashboards built in Power BI, Tableau, and Python/SQL for real-time KPI tracking, cross-functional reporting, and actionable business intelligence.
+            </p>
+            <div class="foundational-tags">
+              <span class="foundational-tag">Power BI</span>
+              <span class="foundational-tag">Tableau</span>
+              <span class="foundational-tag">SQL</span>
+              <span class="foundational-tag">Python</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 6: Methodology, Skills & Credentials -->
   <section class="content-section alternate-bg" id="skills">
     <div class="container">
       <div class="section-header">
-        <div class="badge-tag">Professional Profile</div>
-        <h2 class="section-title">Methodological Competency & Technical Stack</h2>
+        <div class="badge-tag">Professional Profile & Experience</div>
+        <h2 class="section-title">Methodological Competency & Academic Experience</h2>
         <p class="section-subtitle">
-          Rigorous mathematical foundation combined with modern data science engineering tools and clear stakeholder presentation abilities.
+          Rigorous mathematical foundation combined with university faculty teaching, engineering research, and practical industry consulting.
         </p>
       </div>
 
@@ -602,13 +753,13 @@
           <div class="skill-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-          <h3 class="skill-category">Data Science & Analysis Stack</h3>
+          <h3 class="skill-category">Academic & Industry Experience</h3>
           <ul class="skill-list">
-            <li><strong>Languages:</strong> Python (SciPy, Statsmodels, Pandas, NumPy), SQL, R, JavaScript</li>
-            <li><strong>Data Visualization:</strong> Chart.js, D3.js, Matplotlib, Seaborn, Plotly</li>
-            <li><strong>Validation & CI/CD:</strong> PyTest, Great Expectations, Git Version Control, Vercel</li>
-            <li><strong>Data Integrity:</strong> Missing Data Imputation, Outlier Detection (IQR / Mahalanobis)</li>
-            <li><strong>Communication:</strong> Executive Briefings, Interactive Visualizations, Whitepapers</li>
+            <li><strong>Assistant Professor:</strong> SNMIMT (Jan 2026 – Present) teaching AI, Deep Learning & Python</li>
+            <li><strong>Assistant Professor:</strong> Sri Vasavi Engineering College (2025) teaching AI & CV</li>
+            <li><strong>Technical Consultant:</strong> Technovalley Software India (2021 – 2023) ML & Vision</li>
+            <li><strong>Education:</strong> M.Tech in Software Systems (CUSAT, 2017-2019) • B.Tech ECE (2015)</li>
+            <li><strong>Publications:</strong> IEEE Xplore / ICACC 2019 (Harvestable Black Pepper Recognition)</li>
           </ul>
         </div>
       </div>
@@ -621,7 +772,7 @@
             Equipped with proven methodologies to audit AI performance claims, eliminate evaluation bias, and produce high-confidence visual intelligence for engineering and product leadership.
           </p>
           <div class="cta-details">
-            <span class="detail-item"><strong>Candidate:</strong> Jane Rose (Janeferdinant)</span>
+            <span class="detail-item"><strong>Candidate:</strong> Jane Rose Ferdinant (Janeferdinant)</span>
             <span class="detail-item"><strong>Role:</strong> Data Analyst / SME – Data & Statistical Chart Analysis (AI Benchmark)</span>
             <span class="detail-item"><strong>Availability:</strong> Full-Time Remote</span>
           </div>
@@ -631,12 +782,13 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
             Download PDF Dossier
           </a>
+          <a href="assets/Jane_Rose_Ferdinant_CV.pdf" download="Jane_Rose_Ferdinant_CV.pdf" class="btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Download Full CV
+          </a>
           <a href="mailto:janeferdinant@gmail.com" class="btn-outline">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            Contact Jane Rose
-          </a>
-          <a href="https://github.com/Janeferdinant/ai-benchmark-portfolio" target="_blank" rel="noopener noreferrer" class="btn-outline">
-            View Source Code
+            Contact Jane
           </a>
         </div>
       </div>
@@ -647,8 +799,8 @@
   <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-left">
-        <p class="footer-copy">© 2026 Jane Rose. AI Benchmarking & Statistical Data Analysis Portfolio.</p>
-        <p class="footer-sub">Engineered with rigorous mathematical standards, semantic HTML5, and responsive data visualizations.</p>
+        <p class="footer-copy">© 2026 Jane Rose Ferdinant. AI Benchmarking & Statistical Data Analysis Portfolio.</p>
+        <p class="footer-sub">M.Tech (Software Systems, CUSAT) • Assistant Professor @ SNMIMT • Engineered with mathematical rigor and semantic HTML5.</p>
       </div>
       <div class="footer-right">
         <a href="https://ai-benchmark-portfolio.vercel.app/Jane_Rose_AI_Benchmark_Portfolio.pdf" target="_blank" rel="noopener noreferrer" class="footer-pdf-link" title="Open deployed PDF dossier in new tab">

@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jane Rose - AI Benchmark & Statistical Analysis Portfolio Dossier</title>
+  <title>Jane Rose Ferdinant - AI Benchmark & Statistical Analysis Portfolio Dossier</title>
   <style>
     @page {
       size: A4;
-      margin: 14mm 14mm 16mm 14mm;
+      margin: 12mm 14mm 14mm 14mm;
     }
     *, *::before, *::after {
       box-sizing: border-box;
@@ -15,8 +15,8 @@
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 9.5pt;
-      line-height: 1.45;
+      font-size: 9pt;
+      line-height: 1.4;
       color: #1e293b;
       background: #ffffff;
     }
@@ -27,32 +27,47 @@
     .header {
       border-bottom: 2px solid #0f172a;
       padding-bottom: 10px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
+      gap: 15px;
+    }
+    .header-left-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .header-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #0284c7;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
     .header-left h1 {
-      font-size: 20pt;
+      font-size: 18pt;
       font-weight: 800;
       color: #0f172a;
       letter-spacing: -0.02em;
       margin-bottom: 2px;
     }
     .header-left .role {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: 700;
       color: #0284c7;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
     .header-left .meta {
-      font-size: 8.5pt;
+      font-size: 8pt;
       color: #475569;
     }
     .header-right {
       text-align: right;
-      font-size: 8.5pt;
+      font-size: 8pt;
       color: #475569;
+      line-height: 1.35;
     }
 
     /* Live Deployed Links Callout Box */
@@ -60,24 +75,24 @@
       background: #f0f9ff;
       border: 1.5px solid #0284c7;
       border-radius: 6px;
-      padding: 8px 12px;
-      margin-bottom: 14px;
+      padding: 7px 12px;
+      margin-bottom: 12px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
     .links-callout-title {
-      font-size: 9pt;
+      font-size: 8.5pt;
       font-weight: 700;
       color: #0369a1;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
     }
     .links-list {
       display: flex;
-      gap: 14px;
-      font-size: 8.5pt;
+      gap: 12px;
+      font-size: 8pt;
       font-weight: 600;
     }
     .links-list a {
@@ -89,34 +104,34 @@
     }
 
     .section {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     .section-title {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: 800;
       color: #0f172a;
       text-transform: uppercase;
       letter-spacing: 0.04em;
       border-bottom: 1.5px solid #cbd5e1;
-      padding-bottom: 3px;
-      margin-bottom: 8px;
+      padding-bottom: 2px;
+      margin-bottom: 7px;
     }
 
     .kpi-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 8px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .kpi-box {
       border: 1px solid #e2e8f0;
       background: #f8fafc;
       border-radius: 5px;
-      padding: 6px 8px;
+      padding: 5px 8px;
       text-align: center;
     }
     .kpi-box .val {
-      font-size: 13pt;
+      font-size: 12pt;
       font-weight: 800;
       color: #0369a1;
       font-family: 'Courier New', Courier, monospace;
@@ -127,7 +142,7 @@
       color: #334155;
     }
     .kpi-box .sub {
-      font-size: 7pt;
+      font-size: 6.5pt;
       color: #64748b;
     }
 
@@ -135,53 +150,52 @@
       border: 1px solid #e2e8f0;
       background: #ffffff;
       border-radius: 6px;
-      padding: 9px 11px;
-      margin-bottom: 10px;
+      padding: 8px 10px;
+      margin-bottom: 8px;
       page-break-inside: avoid;
     }
     .project-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
     .project-title {
-      font-size: 10.5pt;
+      font-size: 10pt;
       font-weight: 700;
       color: #0f172a;
     }
     .project-badge {
-      font-size: 7.5pt;
+      font-size: 7pt;
       font-weight: 700;
       color: #0369a1;
       background: #e0f2fe;
-      padding: 2px 6px;
+      padding: 2px 5px;
       border-radius: 4px;
     }
     .project-desc {
-      font-size: 9pt;
+      font-size: 8.5pt;
       color: #334155;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .project-bullets {
       margin-left: 14px;
-      font-size: 8.5pt;
+      font-size: 8pt;
       color: #334155;
     }
     .project-bullets li {
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
-    /* Table */
     table.data-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 8pt;
-      margin-top: 6px;
+      font-size: 7.5pt;
+      margin-top: 5px;
     }
     table.data-table th, table.data-table td {
       border: 1px solid #cbd5e1;
-      padding: 4px 6px;
+      padding: 3px 5px;
       text-align: left;
     }
     table.data-table th {
@@ -196,18 +210,18 @@
     .case-card {
       border-left: 3px solid #0284c7;
       background: #f8fafc;
-      padding: 6px 10px;
-      margin-bottom: 8px;
+      padding: 5px 8px;
+      margin-bottom: 6px;
       page-break-inside: avoid;
     }
     .case-card h4 {
-      font-size: 9pt;
+      font-size: 8.5pt;
       font-weight: 700;
       color: #0f172a;
       margin-bottom: 2px;
     }
     .case-card p {
-      font-size: 8pt;
+      font-size: 7.5pt;
       color: #334155;
       line-height: 1.35;
     }
@@ -216,17 +230,34 @@
       page-break-before: always;
     }
 
+    .foundational-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7px;
+      margin-bottom: 6px;
+    }
+    .foundational-item {
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      border-radius: 4px;
+      padding: 5px 8px;
+      font-size: 7.5pt;
+    }
+    .foundational-item strong {
+      color: #0f172a;
+    }
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      font-size: 8pt;
+      gap: 8px;
+      font-size: 7.5pt;
     }
     .skill-col h4 {
-      font-size: 8.5pt;
+      font-size: 8pt;
       font-weight: 700;
       color: #0284c7;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
       border-bottom: 1px solid #e2e8f0;
       padding-bottom: 2px;
     }
@@ -239,29 +270,35 @@
     }
 
     .footer {
-      margin-top: 15px;
-      padding-top: 8px;
+      margin-top: 10px;
+      padding-top: 6px;
       border-top: 1px solid #cbd5e1;
       display: flex;
       justify-content: space-between;
-      font-size: 7.5pt;
+      font-size: 7pt;
       color: #64748b;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header with Authentic Photo -->
   <header class="header">
-    <div class="header-left">
-      <h1>Jane Rose</h1>
-      <div class="role">Subject Matter Expert – Data & Statistical Chart Analysis (AI Benchmark)</div>
-      <div class="meta">Remote (India / Global) • Email: <a href="mailto:janeferdinant@gmail.com">janeferdinant@gmail.com</a> • GitHub: <a href="https://github.com/Janeferdinant">github.com/Janeferdinant</a></div>
+    <div class="header-left-wrap">
+      <img src="assets/photo.png" alt="Jane Rose Ferdinant" class="header-avatar">
+      <div class="header-left">
+        <h1>Jane Rose Ferdinant</h1>
+        <div class="role">Subject Matter Expert – Data & Statistical Chart Analysis (AI Benchmark)</div>
+        <div class="meta">
+          M.Tech (Software Systems, CUSAT) • Assistant Professor @ SNMIMT • Ex-Technovalley Technical Consultant<br>
+          Remote (India / Global) • Email: <a href="mailto:janeferdinant@gmail.com">janeferdinant@gmail.com</a> • GitHub: <a href="https://github.com/Janeferdinant">github.com/Janeferdinant</a>
+        </div>
+      </div>
     </div>
     <div class="header-right">
       <strong>Application Dossier</strong><br>
       AI Benchmark Standards<br>
-      Generated: October 2026
+      Updated: October 2026
     </div>
   </header>
 
@@ -269,12 +306,13 @@
   <div class="links-callout">
     <div>
       <div class="links-callout-title">Interactive Deployment URLs</div>
-      <div style="font-size: 7.5pt; color: #475569;">Direct links to the live interactive web portfolio, deployed PDF, and source code:</div>
+      <div style="font-size: 7pt; color: #475569;">Direct verified links to the live interactive web portfolio and downloadable PDF documents:</div>
     </div>
     <div class="links-list">
       <a href="https://ai-benchmark-portfolio.vercel.app">🌐 Live Web Portfolio</a>
-      <a href="https://ai-benchmark-portfolio.vercel.app/Jane_Rose_AI_Benchmark_Portfolio.pdf">📄 Deployed PDF Dossier</a>
-      <a href="https://github.com/Janeferdinant/ai-benchmark-portfolio">💻 GitHub Repository</a>
+      <a href="https://ai-benchmark-portfolio.vercel.app/Jane_Rose_AI_Benchmark_Portfolio.pdf">📄 Deployed AI Benchmark PDF</a>
+      <a href="https://ai-benchmark-portfolio.vercel.app/assets/Jane_Rose_Ferdinant_CV.pdf">📋 Academic & Industry CV</a>
+      <a href="https://github.com/Janeferdinant/ai-benchmark-portfolio">💻 GitHub Repo</a>
     </div>
   </div>
 
@@ -304,15 +342,15 @@
 
   <!-- Executive Summary -->
   <section class="section">
-    <div class="section-title">Executive Profile & Analytical Philosophy</div>
-    <p style="font-size: 8.5pt; color: #334155; line-height: 1.45;">
-      Data Analyst and Subject Matter Expert specializing in AI model benchmarking, statistical chart analysis, error distribution auditing, and evaluation governance. Proven methodology in differentiating genuine architectural reasoning breakthroughs from stochastic evaluation noise, detecting pre-training test-set contamination (perplexity shift & n-gram memorization), resolving Simpson's Paradox in disaggregated benchmarks, and calibrating LLM-as-a-Judge systems to eliminate length and position biases.
+    <div class="section-title">Executive Profile & Background</div>
+    <p style="font-size: 8pt; color: #334155; line-height: 1.4;">
+      Academic educator, data scientist, and AI benchmarking SME with an M.Tech in Information Technology (Software Systems) from <strong>CUSAT</strong>. Currently serving as Assistant Professor at <strong>SNMIMT</strong> teaching Deep Learning, AI, and Soft Computing; previously Technical Consultant at <strong>Technovalley Software India</strong> and Assistant Professor at Sri Vasavi Engineering College. Published IEEE researcher in computer vision. Brings rigorous mathematical methodologies, non-parametric bootstrapping, hypothesis testing, contamination forensics, and visual chart translation to AI benchmark governance.
     </p>
   </section>
 
   <!-- Market-Relevant Projects -->
   <section class="section">
-    <div class="section-title">Market-Relevant AI Benchmark Projects</div>
+    <div class="section-title">Specialized AI Benchmark Evaluation Projects</div>
 
     <!-- Project 1 -->
     <div class="project-card">
@@ -401,7 +439,7 @@
         Engineered an automated data integrity auditor detecting memorization vs. generalization through token perplexity shifts and multi-domain Simpson's Paradox audits.
       </p>
       <ul class="project-bullets">
-        <li><strong>Contamination Flagging ($Z > 2.5$):</strong> Measured $\Delta \text{PPL} = \text{PPL}_{\text{unseen}} - \text{PPL}_{\text{test}}$. Discovered that fine-tuned open models claiming &gt;90% GSM8K collapsed to 48.6% when numerical operands were perturbed, demonstrating test-set memorization rather than arithmetic generalization.</li>
+        <li><strong>Contamination Flagging ($Z > 2.5$):</strong> Measured $\Delta \text{PPL} = \text{PPL}_{\text{unseen}} - \text{PPL}_{\text{test}}$. Discovered that fine-tuned open models claiming &gt;90% GSM8K collapsed to 48.6% when numerical operands were perturbed, demonstrating test-set memorization.</li>
         <li><strong>Simpson's Paradox Resolution:</strong> Disaggregated macro benchmark scores into stratified sub-domains (Law, Medicine, Math, CS). Showed that Model Beta led macro scores (+1.4%) solely through high-volume CS syntax while suffering severe regressions (-12.4%) in Legal reasoning.</li>
       </ul>
     </div>
@@ -424,90 +462,94 @@
       </ul>
     </div>
 
-    <!-- Project 4 -->
-    <div class="project-card">
-      <div class="project-header">
-        <span class="project-title">4. Statistical Sample Size & Margin of Error Simulator</span>
-        <span class="project-badge">Interactive Pedagogical Laboratory</span>
+    <!-- Foundational Applied AI & Data Science Portfolio Projects -->
+    <section class="section">
+      <div class="section-title">Foundational Applied AI & Data Science Projects</div>
+      <div class="foundational-grid">
+        <div class="foundational-item">
+          <strong>Harvestable Black Pepper Recognition (CV / ResNet50):</strong> Custom ResNet50 model detecting and classifying ripeness of black pepper in agricultural fields. Published in <em>IEEE Xplore / ICACC 2019</em>.
+        </div>
+        <div class="foundational-item">
+          <strong>Stock Market Forecasting (LSTM & Deep RL):</strong> Financial time-series price trend prediction, risk volatility modeling, and algorithmic trading strategy evaluation.
+        </div>
+        <div class="foundational-item">
+          <strong>COVID-19 & Pneumonia Automated Detection (CNN):</strong> Deep transfer learning model for rapid radiographic detection from digital chest X-rays.
+        </div>
+        <div class="foundational-item">
+          <strong>E-Commerce Collaborative Filtering Recommendation:</strong> Matrix factorization and item-user recommendation engine boosting discovery and conversion metrics.
+        </div>
       </div>
-      <p class="project-desc">
-        Designed an interactive mathematical laboratory enabling non-technical stakeholders and evaluation engineers to simulate sample sizes ($N=100$ to $5,000$), observed accuracy deltas, and task variances. Computes live margins of error, Z-scores, two-tailed p-values, and statistical power ($1 - \beta$).
-      </p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Real-World Case Studies -->
-  <section class="section">
-    <div class="section-title">Applied Industry Case Studies</div>
+    <!-- Case Studies -->
+    <section class="section">
+      <div class="section-title">Applied Industry Case Studies</div>
 
-    <div class="case-card">
-      <h4>Case 01: Uncovering Simpson's Paradox in Multilingual Reasoning Benchmarks</h4>
-      <p>
-        <strong>Problem:</strong> A model release candidate claimed a +4.1% aggregate gain across 14 languages, but regional teams reported degraded low-resource customer sentiment handling.<br>
-        <strong>Methodology:</strong> Disaggregated performance by language cohort. Discovered a 20x higher sampling density in English masked an 8.4% drop in Indic and African languages.<br>
-        <strong>Outcome:</strong> Implemented stratified invariant population weighting, halting a flawed release and establishing a new corporate multilingual benchmarking standard.
-      </p>
-    </div>
-
-    <div class="case-card">
-      <h4>Case 02: Forensic Audit of Math Test-Set Leakage in 70B Parameter Models</h4>
-      <p>
-        <strong>Problem:</strong> An open-weights 70B model claimed higher GSM8K performance than proprietary models 5x its size.<br>
-        <strong>Methodology:</strong> Executed an n-gram prefix memorization audit and compared token loss on original questions versus dynamically perturbed arithmetic variants.<br>
-        <strong>Outcome:</strong> Proved performance collapsed from 91.2% to 48.3% on perturbed operands, confirming rote test-set contamination. Produced an executive forensic audit for safety leadership.
-      </p>
-    </div>
-
-    <div class="case-card">
-      <h4>Case 03: Eliminating Position & Length Biases in Automated Evaluation</h4>
-      <p>
-        <strong>Problem:</strong> Automated LLM judges exhibited 64% first-token preference (order bias) and favored wordy responses.<br>
-        <strong>Methodology:</strong> Formulated an Order A/B permutation swap protocol and fitted an orthogonal length de-biasing regression penalty.<br>
-        <strong>Outcome:</strong> Elevated inter-annotator agreement from Cohen's $\kappa = 0.62$ to $\kappa = 0.89$, cutting human evaluation audit costs by 70%.
-      </p>
-    </div>
-  </section>
-
-  <!-- Technical Skills & Stack -->
-  <section class="section">
-    <div class="section-title">Methodological Competency & Technical Stack</div>
-    <div class="skills-grid">
-      <div class="skill-col">
-        <h4>Statistical Methods</h4>
-        <ul>
-          <li>Non-parametric Bootstrapping (10k)</li>
-          <li>Paired Wilcoxon & Welch's t-test</li>
-          <li>Multiple Testing (Bonferroni / FDR)</li>
-          <li>Bradley-Terry Tournament Modeling</li>
-          <li>Cohen's Kappa (κ) & Gwet's AC1</li>
-        </ul>
+      <div class="case-card">
+        <h4>Case 01: Uncovering Simpson's Paradox in Multilingual Reasoning Benchmarks</h4>
+        <p>
+          <strong>Problem:</strong> Candidate model claimed a +4.1% aggregate gain across 14 languages, but regional users suffered sentiment degradation.<br>
+          <strong>Resolution:</strong> Discovered 20x higher English sampling masked an 8.4% drop in Indic/African languages. Enforced stratified population weighting.
+        </p>
       </div>
-      <div class="skill-col">
-        <h4>AI Evaluation Frameworks</h4>
-        <ul>
-          <li>MMLU-Pro, GSM8K, MATH</li>
-          <li>SWE-bench (Verified & Lite), HumanEval</li>
-          <li>HELM, MT-Bench, LMSYS Arena</li>
-          <li>TruthfulQA & Hallucination Auditing</li>
-          <li>Inference Latency (TTFT) & TPS Analysis</li>
-        </ul>
+
+      <div class="case-card">
+        <h4>Case 02: Forensic Audit of Math Test-Set Leakage in 70B Models</h4>
+        <p>
+          <strong>Problem:</strong> Open-weights 70B model claimed higher GSM8K performance than models 5x its size.<br>
+          <strong>Resolution:</strong> Accuracy dropped from 91.2% to 48.3% on perturbed operands, confirming rote memorization. Delivered forensic report for leadership.
+        </p>
       </div>
-      <div class="skill-col">
-        <h4>Data & Engineering Stack</h4>
-        <ul>
-          <li>Python (SciPy, Statsmodels, Pandas, NumPy)</li>
-          <li>SQL, PostgreSQL, BigQuery</li>
-          <li>Chart.js, D3.js, Matplotlib, Seaborn</li>
-          <li>Git, CI/CD, Vercel, PyTest</li>
-          <li>Executive & Technical Communication</li>
-        </ul>
+
+      <div class="case-card">
+        <h4>Case 03: Eliminating Position & Length Biases in Automated LLM Judges</h4>
+        <p>
+          <strong>Problem:</strong> LLM judges favored first-presented and excessively verbose answers.<br>
+          <strong>Resolution:</strong> Formulated Order A/B swapping and an orthogonal length penalty, raising human agreement from $\kappa = 0.62$ to $\kappa = 0.89$.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Technical Skills & Stack -->
+    <section class="section">
+      <div class="section-title">Methodological Competency & Technical Stack</div>
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h4>Statistical Methods</h4>
+          <ul>
+            <li>Non-parametric Bootstrapping (10k)</li>
+            <li>Paired Wilcoxon & Welch's t-test</li>
+            <li>Multiple Testing (Bonferroni / FDR)</li>
+            <li>Bradley-Terry Tournament Modeling</li>
+            <li>Cohen's Kappa (κ) & Gwet's AC1</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h4>AI Evaluation Frameworks</h4>
+          <ul>
+            <li>MMLU-Pro, GSM8K, MATH</li>
+            <li>SWE-bench (Verified & Lite), HumanEval</li>
+            <li>HELM, MT-Bench, LMSYS Arena</li>
+            <li>TruthfulQA & Hallucination Auditing</li>
+            <li>Inference Latency (TTFT) & TPS Analysis</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h4>Data & Engineering Stack</h4>
+          <ul>
+            <li>Python (SciPy, Statsmodels, Pandas, NumPy)</li>
+            <li>SQL, PostgreSQL, BigQuery, MATLAB</li>
+            <li>Chart.js, D3.js, Matplotlib, Seaborn, Power BI</li>
+            <li>PyTest, Git, CI/CD, Vercel, Docker</li>
+            <li>Executive & Technical Communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div>Candidate: <strong>Jane Rose</strong> • Role: <strong>Subject Matter Expert – Data & Statistical Chart Analysis (AI Benchmark)</strong></div>
+    <div>Candidate: <strong>Jane Rose Ferdinant</strong> • Role: <strong>Subject Matter Expert – Data & Statistical Chart Analysis (AI Benchmark)</strong></div>
     <div>Live URL: <a href="https://ai-benchmark-portfolio.vercel.app">https://ai-benchmark-portfolio.vercel.app</a> • PDF: <a href="https://ai-benchmark-portfolio.vercel.app/Jane_Rose_AI_Benchmark_Portfolio.pdf">Jane_Rose_AI_Benchmark_Portfolio.pdf</a></div>
   </footer>
 
