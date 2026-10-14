@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Rose | AI Benchmark & Statistical Chart Analysis SME</title>
+  <meta name="description" content="Portfolio of Jane Rose - Subject Matter Expert in AI Benchmark Evaluation, Statistical Data Analysis, Anomaly Detection, and Visual Chart Interpretation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body class="theme-dark">
+  <!-- Top Global Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <div class="brand-identity">
+        <div class="avatar-badge" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3v18h18"/>
+            <path d="m19 9-5 5-4-4-3 3"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Jane Rose</span>
+          <span class="brand-role">Subject Matter Expert • AI Benchmarking & Statistical Analysis</span>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#benchmarks" class="nav-link active">Frontier Benchmarks</a></li>
+          <li><a href="#contamination" class="nav-link">Anomaly & Contamination</a></li>
+          <li><a href="#elo-matrix" class="nav-link">Pairwise Elo & Bias</a></li>
+          <li><a href="#simulator" class="nav-link">Statistical Simulator</a></li>
+          <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+          <li><a href="#skills" class="nav-link">Methodology & Skills</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Audience Lens Toggle -->
+        <div class="lens-switcher" role="radiogroup" aria-label="Audience View Switcher">
+          <button class="lens-btn active" id="btn-lens-sme" role="radio" aria-checked="true" data-lens="sme" title="Detailed statistical methodology, confidence intervals, p-values and error distributions">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            SME Deep Dive
+          </button>
+          <button class="lens-btn" id="btn-lens-exec" role="radio" aria-checked="false" data-lens="exec" title="High-level executive findings and strategic takeaways">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            Executive Summary
+          </button>
+        </div>
+
+        <a href="https://github.com/Janeferdinant/ai-benchmark-portfolio" target="_blank" rel="noopener noreferrer" class="btn-github" id="github-repo-link" aria-label="GitHub Repository">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span class="btn-text">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-background-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-pill">
+        <span class="pulse-indicator"></span>
+        <span class="pill-text">AI Benchmark & Statistical Data Specialist • Available for Remote Roles</span>
+      </div>
+      
+      <h1 class="hero-title">
+        Evaluating Frontier AI Models with <span class="gradient-text">Statistical Rigor</span> & Actionable Visual Insights
+      </h1>
+
+      <p class="hero-description">
+        Specialized in statistical benchmark validation, error distribution auditing, test set contamination forensics, and translating complex multi-dimensional LLM performance metrics into clear decisions for engineering and executive leadership.
+      </p>
+
+      <!-- Key Impact Metrics Banner -->
+      <div class="kpi-banner">
+        <div class="kpi-card">
+          <div class="kpi-value" id="kpi-models">18+</div>
+          <div class="kpi-label">Frontier & Open Models Audited</div>
+          <div class="kpi-subtext">MMLU-Pro, GSM8K, SWE-bench, HELM</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">95% CI</div>
+          <div class="kpi-label">Bootstrap Confidence Protocol</div>
+          <div class="kpi-subtext">10,000 iterations per benchmark split</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">0.94</div>
+          <div class="kpi-label">Inter-Rater Reliability (Cohen's κ)</div>
+          <div class="kpi-subtext">LLM-as-a-Judge calibration standard</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">&lt; 0.001</div>
+          <div class="kpi-label">Hypothesis Significance Threshold</div>
+          <div class="kpi-subtext">Bonferroni-corrected multiple testing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Frontier Benchmarks & Pareto Tradeoff Engine -->
+  <section class="content-section" id="benchmarks">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag">Project 1 • Performance Analysis Engine</div>
+        <h2 class="section-title">Multi-Model Benchmark Frontier & Pareto Tradeoffs</h2>
+        <p class="section-subtitle">
+          Evaluating accuracy, inference latency, and computational cost trade-offs across frontier proprietary and open-weights models to discern true frontier advancement from marketing variance.
+        </p>
+      </div>
+
+      <!-- Interactive Controls Toolbar -->
+      <div class="control-panel">
+        <div class="control-group">
+          <label for="benchmark-select" class="control-label">Benchmark Suite:</label>
+          <select id="benchmark-select" class="form-select">
+            <option value="mmlu_pro" selected>MMLU-Pro (Complex Reasoning & STEM)</option>
+            <option value="gsm8k">GSM8K (Multi-step Math Reasoning)</option>
+            <option value="swe_bench">SWE-bench Lite (Real-world Software Engineering)</option>
+            <option value="humaneval">HumanEval (Code Generation Pass@1)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="x-axis-select" class="control-label">Tradeoff Metric (X-Axis):</label>
+          <select id="x-axis-select" class="form-select">
+            <option value="latency" selected>Median Latency (ms / 1k output tokens)</option>
+            <option value="cost">Inference Cost ($ / 1M Blended Tokens)</option>
+            <option value="params">Active Parameter Count (Billions)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Model Family Filter:</label>
+          <div class="filter-chips" id="model-family-filters">
+            <button class="chip active" data-family="all">All Models</button>
+            <button class="chip" data-family="Proprietary">Proprietary</button>
+            <button class="chip" data-family="Open-Weights">Open-Weights</button>
+            <button class="chip" data-family="Reasoning-RL">Reasoning / CoT</button>
+          </div>
+        </div>
+
+        <div class="control-group right-align">
+          <button class="btn-secondary" id="btn-reset-zoom" title="Reset Chart Zoom">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            Reset View
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Chart Card -->
+      <div class="chart-container-card">
+        <div class="chart-header">
+          <div class="chart-title-wrap">
+            <h3 class="chart-title" id="tradeoff-chart-heading">MMLU-Pro Accuracy vs. Latency (ms)</h3>
+            <span class="pareto-badge">★ Pareto Frontier Highlighted</span>
+          </div>
+          <div class="confidence-indicator" id="ci-legend-note">
+            <span class="ci-dot"></span> Shaded region shows 95% Bootstrap Confidence Interval
+          </div>
+        </div>
+
+        <div class="chart-wrapper">
+          <canvas id="paretoChart" height="420"></canvas>
+        </div>
+
+        <!-- Dynamic Context Insight Panel (Adapts to Lens) -->
+        <div class="insight-callout" id="frontier-insight-box">
+          <div class="insight-header">
+            <div class="insight-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+            </div>
+            <strong class="insight-mode-title" id="frontier-insight-title">SME Statistical Interpretation</strong>
+          </div>
+          <div class="insight-content" id="frontier-insight-text">
+            Loading statistical interpretation...
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistical Benchmark Table -->
+      <div class="table-card">
+        <div class="table-header">
+          <h3 class="table-title">Audited Benchmark Scoreboard & Uncertainty Margins</h3>
+          <span class="table-badge">Sample Size N=1,200 Prompts • Bootstrap B=10,000</span>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table" id="benchmark-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Family</th>
+                <th>Score (Raw %)</th>
+                <th>95% Confidence Band</th>
+                <th>Std Error (SE)</th>
+                <th>Throughput</th>
+                <th>Pareto Efficient?</th>
+                <th>Z-Score Rank</th>
+              </tr>
+            </thead>
+            <tbody id="benchmark-table-body">
+              <!-- Populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Anomaly Detection & Contamination Audit -->
+  <section class="content-section alternate-bg" id="contamination">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag badge-amber">Project 2 • Data Integrity & Anomaly Forensics</div>
+        <h2 class="section-title">Benchmark Contamination & Anomaly Forensic Suite</h2>
+        <p class="section-subtitle">
+          Detecting pre-training memorization vs. generalization through perplexity delta analysis, 8-gram overlap distribution, and discovering Simpson's Paradox anomalies across sub-categories.
+        </p>
+      </div>
+
+      <div class="grid-2col">
+        <!-- Contamination Scatter Chart -->
+        <div class="chart-container-card">
+          <div class="chart-header">
+            <div>
+              <h3 class="chart-title">Test-Set Overlap vs. Perplexity Discrepancy</h3>
+              <p class="chart-desc">Upper-right quadrant identifies high-probability contamination anomalies.</p>
+            </div>
+            <span class="danger-badge">Anomaly Threshold: Z > 2.5</span>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="contaminationChart" height="340"></canvas>
+          </div>
+          <div class="chart-footer-note">
+            Statistical metric: $\Delta \text{PPL} = \text{PPL}_{\text{unseen}} - \text{PPL}_{\text{test}}$. Models exhibiting drastic drops in perplexity on canonical test items versus paraphrased counterparts trigger forensic flags.
+          </div>
+        </div>
+
+        <!-- Simpson's Paradox / Sub-Category Divergence -->
+        <div class="chart-container-card">
+          <div class="chart-header">
+            <div>
+              <h3 class="chart-title">Simpson's Paradox & Domain Breakdown</h3>
+              <p class="chart-desc">How macro-average scores mask catastrophic sub-domain degradation.</p>
+            </div>
+            <div class="domain-selector-pill">
+              <button class="pill-btn active" data-subdomain="all">All Domains</button>
+              <button class="pill-btn" data-subdomain="law">Legal</button>
+              <button class="pill-btn" data-subdomain="medicine">Medical</button>
+              <button class="pill-btn" data-subdomain="math">Math</button>
+            </div>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="domainDivergenceChart" height="340"></canvas>
+          </div>
+          <div class="chart-footer-note">
+            <strong>Key SME Takeaway:</strong> Model Beta scores 1.4% higher than Model Alpha on macro-average, but loses by -12.4% on high-stakes Legal reasoning due to non-uniform dataset weighting.
+          </div>
+        </div>
+      </div>
+
+      <!-- Contamination Audit Findings Table -->
+      <div class="audit-summary-box">
+        <h4 class="audit-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          SME Forensic Protocol: Contamination Mitigation Strategy
+        </h4>
+        <div class="audit-grid">
+          <div class="audit-item">
+            <span class="audit-number">01</span>
+            <div class="audit-info">
+              <h5>Dynamic Canonical Paraphrasing</h5>
+              <p>Re-evaluating benchmarks using LLM-adversarial paraphrasing preserves reasoning dependencies while reducing verbatim memorization bias by 38%.</p>
+            </div>
+          </div>
+          <div class="audit-item">
+            <span class="audit-number">02</span>
+            <div class="audit-info">
+              <h5>Loss-per-Token Distribution Auditing</h5>
+              <p>Comparing loss per token on multiple choice questions against baseline distributions to calculate empirical Bayes contamination probabilities.</p>
+            </div>
+          </div>
+          <div class="audit-item">
+            <span class="audit-number">03</span>
+            <div class="audit-info">
+              <h5>Sub-Cohort Stratified Weighting</h5>
+              <p>Neutralizing Simpson's Paradox by enforcing invariant demographic and domain weights across benchmark revisions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Bradley-Terry Elo Win-Rate Matrix & Judge Bias -->
+  <section class="content-section" id="elo-matrix">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag badge-indigo">Project 3 • Pairwise Tournament Evaluation</div>
+        <h2 class="section-title">Bradley-Terry Elo Matrix & LLM-as-a-Judge Calibration</h2>
+        <p class="section-subtitle">
+          Head-to-head pairwise battle evaluation modeling win probabilities, correcting for verbosity (length bias), position bias, and calibrating inter-judge consensus (Cohen's Kappa).
+        </p>
+      </div>
+
+      <div class="grid-2col">
+        <!-- Interactive Heatmap / Battle Matrix -->
+        <div class="chart-container-card">
+          <div class="chart-header">
+            <div>
+              <h3 class="chart-title">Head-to-Head Win Probability Heatmap</h3>
+              <p class="chart-desc">Row Model Win-Rate against Column Model ($P(i > j)$ via Bradley-Terry)</p>
+            </div>
+          </div>
+          <div class="heatmap-matrix-container" id="elo-heatmap-container">
+            <!-- Rendered by JS -->
+          </div>
+          <div class="chart-footer-note">
+            Calculated over 14,500 pairwise blind matches. Tie rate distributed symmetrically.
+          </div>
+        </div>
+
+        <!-- Bias Mitigation & Judge Calibration -->
+        <div class="chart-container-card">
+          <div class="chart-header">
+            <div>
+              <h3 class="chart-title">Length Bias Mitigation Impact</h3>
+              <p class="chart-desc">Raw vs. Length-Controlled Win Rate ($R^2$ shift)</p>
+            </div>
+            <div class="control-chips">
+              <button class="chip active" id="btn-toggle-raw-elo">Raw Win Rate</button>
+              <button class="chip" id="btn-toggle-debiased-elo">Debiased (Length Adjusted)</button>
+            </div>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="lengthBiasChart" height="320"></canvas>
+          </div>
+          <div class="chart-footer-note">
+            <strong>Statistical Finding:</strong> Verbose responses gained an unmerited +7.3% win rate boost under uncalibrated judges. Applying a logistic regression length-penalty re-aligns win-rates with human gold standards ($r = 0.91$).
+          </div>
+        </div>
+      </div>
+
+      <!-- Radar Comparison of Multi-Dimensional Capabilities -->
+      <div class="chart-container-card mt-6">
+        <div class="chart-header">
+          <div>
+            <h3 class="chart-title">Multi-Dimensional Capability Radar: Frontier vs. Open Models</h3>
+            <p class="chart-desc">Audited scores normalized across 6 critical evaluation axes.</p>
+          </div>
+          <div class="radar-model-legend" id="radar-legend-controls">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+        <div class="chart-wrapper radar-wrapper">
+          <canvas id="radarChart" height="380"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Interactive Statistical Playground -->
+  <section class="content-section alternate-bg" id="simulator">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag badge-cyan">Interactive Tool • Statistical Laboratory</div>
+        <h2 class="section-title">Benchmark Sample Size & Confidence Simulator</h2>
+        <p class="section-subtitle">
+          Test statistical significance thresholds ($p < 0.05$), observe standard error shrinkage, and determine the minimum sample size required to validate a 2% model improvement.
+        </p>
+      </div>
+
+      <div class="simulator-card">
+        <div class="simulator-grid">
+          <!-- Control Sliders -->
+          <div class="simulator-controls">
+            <h4 class="sim-panel-title">Experiment Parameters</h4>
+
+            <div class="sim-slider-group">
+              <div class="sim-label-row">
+                <label for="sim-n">Evaluation Sample Size ($N$ Prompts):</label>
+                <span class="sim-val" id="val-sim-n">1,000</span>
+              </div>
+              <input type="range" id="sim-n" min="100" max="5000" step="100" value="1000" class="sim-slider">
+              <span class="sim-hint">Higher $N$ tightens the confidence interval and reduces false positive risk.</span>
+            </div>
+
+            <div class="sim-slider-group">
+              <div class="sim-label-row">
+                <label for="sim-delta">Observed Accuracy Delta ($\Delta$ %):</label>
+                <span class="sim-val" id="val-sim-delta">+2.5%</span>
+              </div>
+              <input type="range" id="sim-delta" min="0.5" max="8.0" step="0.5" value="2.5" class="sim-slider">
+              <span class="sim-hint">Reported improvement of Challenger Model over Baseline.</span>
+            </div>
+
+            <div class="sim-slider-group">
+              <div class="sim-label-row">
+                <label for="sim-confidence">Confidence Level:</label>
+                <span class="sim-val" id="val-sim-confidence">95% (Z = 1.96)</span>
+              </div>
+              <select id="sim-confidence" class="form-select">
+                <option value="90">90% Confidence (Z = 1.645)</option>
+                <option value="95" selected>95% Confidence (Z = 1.960)</option>
+                <option value="99">99% Confidence (Z = 2.576)</option>
+              </select>
+            </div>
+
+            <div class="sim-slider-group">
+              <div class="sim-label-row">
+                <label for="sim-variance">Benchmark Difficulty Variance ($\sigma$):</label>
+                <span class="sim-val" id="val-sim-variance">0.45</span>
+              </div>
+              <input type="range" id="sim-variance" min="0.2" max="0.8" step="0.05" value="0.45" class="sim-slider">
+            </div>
+          </div>
+
+          <!-- Output Statistical Engine -->
+          <div class="simulator-results">
+            <h4 class="sim-panel-title">Real-Time Statistical Verdict</h4>
+
+            <div class="verdict-banner" id="sim-verdict-box">
+              <div class="verdict-icon" id="sim-verdict-icon">✓</div>
+              <div>
+                <h5 class="verdict-headline" id="sim-verdict-title">Statistically Significant Improvement</h5>
+                <p class="verdict-body" id="sim-verdict-desc">
+                  With $N=1,000$, a +2.5% delta exceeds the critical error margin. The observed gain cannot be attributed to stochastic sampling noise.
+                </p>
+              </div>
+            </div>
+
+            <div class="metric-readout-grid">
+              <div class="readout-card">
+                <span class="readout-label">Margin of Error (MOE)</span>
+                <span class="readout-value" id="res-moe">±1.40%</span>
+              </div>
+              <div class="readout-card">
+                <span class="readout-label">Calculated p-value</span>
+                <span class="readout-value" id="res-pvalue">p = 0.0084</span>
+              </div>
+              <div class="readout-card">
+                <span class="readout-label">Statistical Power ($1 - \beta$)</span>
+                <span class="readout-value" id="res-power">88.4%</span>
+              </div>
+              <div class="readout-card">
+                <span class="readout-label">Min. N for $\alpha=0.05$</span>
+                <span class="readout-value" id="res-min-n">615</span>
+              </div>
+            </div>
+
+            <!-- Distribution Visualization -->
+            <div class="sim-chart-wrap">
+              <canvas id="simDistributionChart" height="180"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Real-World Case Studies -->
+  <section class="content-section" id="case-studies">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag badge-purple">Applied Methodology</div>
+        <h2 class="section-title">Benchmark Engineering Case Studies</h2>
+        <p class="section-subtitle">
+          Real-world examples demonstrating end-to-end data validation, methodology governance, and cross-functional stakeholder communication.
+        </p>
+      </div>
+
+      <div class="case-study-grid">
+        <!-- Case 1 -->
+        <article class="case-card">
+          <div class="case-badge">Case 01 • Anomaly Resolution</div>
+          <h3 class="case-title">Uncovering Simpson's Paradox in Multilingual Reasoning Benchmarks</h3>
+          <p class="case-meta"><strong>Focus:</strong> Data Aggregation & Statistical Confounding</p>
+          <div class="case-body">
+            <p><strong>Problem:</strong> Model release reports indicated a 4.1% aggregate improvement across 14 languages. However, regional business stakeholders reported degradation in low-resource customer sentiment tasks.</p>
+            <p><strong>Investigation:</strong> Disaggregated benchmark data by language tier. Discovered that a 20x higher sampling density in English (where the model improved slightly) concealed an average 8.4% drop across Indic and African languages.</p>
+            <p><strong>Resolution:</strong> Implemented stratified population weighting and revised the release decision criteria, preventing a flawed production deployment.</p>
+          </div>
+          <div class="case-tags">
+            <span>Stratified Sampling</span>
+            <span>Confounding Variables</span>
+            <span>Multivariate Analysis</span>
+          </div>
+        </article>
+
+        <!-- Case 2 -->
+        <article class="case-card">
+          <div class="case-badge">Case 02 • Integrity Audit</div>
+          <h3 class="case-title">Forensic Audit of Math Test-Set Leakage in Open-Source 70B Models</h3>
+          <p class="case-meta"><strong>Focus:</strong> Contamination Detection & Validation</p>
+          <div class="case-body">
+            <p><strong>Problem:</strong> A new fine-tuned open-source model claimed higher GSM8K performance than frontier models 5x its size, raising suspicion of test-set data leakage.</p>
+            <p><strong>Investigation:</strong> Executed an n-gram prefix memorization test and evaluated token loss across original questions versus numerically perturbed problem variants.</p>
+            <p><strong>Resolution:</strong> Proved that model accuracy plummeted from 91.2% to 48.3% when arithmetic operands were perturbed, demonstrating rote memorization over reasoning. Produced a comprehensive forensic report for the safety board.</p>
+          </div>
+          <div class="case-tags">
+            <span>Data Contamination</span>
+            <span>Adversarial Testing</span>
+            <span>Loss Distribution</span>
+          </div>
+        </article>
+
+        <!-- Case 3 -->
+        <article class="case-card">
+          <div class="case-badge">Case 03 • Methodology Refinement</div>
+          <h3 class="case-title">Standardizing LLM-as-a-Judge to Eliminate Position & Verbosity Biases</h3>
+          <p class="case-meta"><strong>Focus:</strong> Evaluator Calibration & Inter-Rater Reliability</p>
+          <div class="case-body">
+            <p><strong>Problem:</strong> Automated LLM judges displayed significant variance in win-rate evaluations, displaying a 64% bias toward the first-presented answer (order bias) and favoring longer answers regardless of correctness.</p>
+            <p><strong>Investigation:</strong> Formulated a pairwise permutation protocol (swapping Order A/B) and trained an orthogonal ridge regression penalty to de-bias length.</p>
+            <p><strong>Resolution:</strong> Increased agreement with senior human annotators from Cohen's $\kappa = 0.62$ to $\kappa = 0.89$, reducing evaluation pipeline costs by 70% while improving benchmark credibility.</p>
+          </div>
+          <div class="case-tags">
+            <span>Bradley-Terry Modeling</span>
+            <span>Cohen's Kappa</span>
+            <span>Bias Mitigation</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Methodology, Skills & Credentials -->
+  <section class="content-section alternate-bg" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag">Professional Profile</div>
+        <h2 class="section-title">Methodological Competency & Technical Stack</h2>
+        <p class="section-subtitle">
+          Rigorous mathematical foundation combined with modern data science engineering tools and clear stakeholder presentation abilities.
+        </p>
+      </div>
+
+      <div class="grid-3col">
+        <!-- Competency 1 -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="skill-category">Statistical Methodologies</h3>
+          <ul class="skill-list">
+            <li><strong>Hypothesis Testing:</strong> Student's t-test, Welch's t-test, Mann-Whitney U, Chi-Square</li>
+            <li><strong>Resampling Techniques:</strong> Non-parametric Bootstrapping (10k iterations), Jackknife</li>
+            <li><strong>Multiple Testing Correction:</strong> Bonferroni, Holm-Bonferroni, Benjamini-Hochberg (FDR)</li>
+            <li><strong>Ranking & Modeling:</strong> Bradley-Terry Win-Rate Modeling, Elo Rating Systems</li>
+            <li><strong>Inter-Rater Reliability:</strong> Cohen's Kappa ($\kappa$), Fleiss' Kappa, Gwet's AC1</li>
+          </ul>
+        </div>
+
+        <!-- Competency 2 -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h10"/></svg>
+          </div>
+          <h3 class="skill-category">AI Benchmarking Frameworks</h3>
+          <ul class="skill-list">
+            <li><strong>Reasoning & Knowledge:</strong> MMLU-Pro, GSM8K, MATH, ARC Challenge, GPQA</li>
+            <li><strong>Coding & Agents:</strong> HumanEval, MBPP, SWE-bench (Verified & Lite)</li>
+            <li><strong>Comprehensive Suites:</strong> HELM (Holistic Evaluation), LMSYS Chatbot Arena, MT-Bench</li>
+            <li><strong>Safety & Robustness:</strong> TruthfulQA, RealToxicityPrompts, Adversarial NLI</li>
+            <li><strong>Efficiency Metrics:</strong> Time to First Token (TTFT), Output TPS, VRAM Utilization</li>
+          </ul>
+        </div>
+
+        <!-- Competency 3 -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="skill-category">Data Science & Analysis Stack</h3>
+          <ul class="skill-list">
+            <li><strong>Languages:</strong> Python (SciPy, Statsmodels, Pandas, NumPy), SQL, R, JavaScript</li>
+            <li><strong>Data Visualization:</strong> Chart.js, D3.js, Matplotlib, Seaborn, Plotly</li>
+            <li><strong>Validation & CI/CD:</strong> PyTest, Great Expectations, Git Version Control, Vercel</li>
+            <li><strong>Data Integrity:</strong> Missing Data Imputation, Outlier Detection (IQR / Mahalanobis)</li>
+            <li><strong>Communication:</strong> Executive Briefings, Interactive Visualizations, Whitepapers</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Call To Action & Application Note -->
+      <div class="application-cta-card">
+        <div class="cta-content">
+          <h3 class="cta-title">Ready to bring statistical rigor to your AI benchmarking team</h3>
+          <p class="cta-desc">
+            Equipped with proven methodologies to audit AI performance claims, eliminate evaluation bias, and produce high-confidence visual intelligence for engineering and product leadership.
+          </p>
+          <div class="cta-details">
+            <span class="detail-item"><strong>Candidate:</strong> Jane Rose (Janeferdinant)</span>
+            <span class="detail-item"><strong>Role:</strong> Data Analyst / SME – Data & Statistical Chart Analysis (AI Benchmark)</span>
+            <span class="detail-item"><strong>Availability:</strong> Full-Time Remote</span>
+          </div>
+        </div>
+        <div class="cta-actions">
+          <a href="mailto:janeferdinant@gmail.com" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Contact Jane Rose
+          </a>
+          <a href="https://github.com/Janeferdinant/ai-benchmark-portfolio" target="_blank" rel="noopener noreferrer" class="btn-outline">
+            View Source Code
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p class="footer-copy">© 2026 Jane Rose. AI Benchmarking & Statistical Data Analysis Portfolio.</p>
+        <p class="footer-sub">Engineered with rigorous mathematical standards, semantic HTML5, and responsive data visualizations.</p>
+      </div>
+      <div class="footer-right">
+        <div class="deployment-badge">
+          <span class="status-dot"></span>
+          <span>Deployed on Vercel & GitHub</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data-store.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "contamination_cases": [
+    {
+      "model": "Model-Gamma (FineTuned 70B)",
+      "family": "Fine-Tuned Open",
+      "ngram_overlap_pct": 34.2,
+      "delta_ppl": -4.8,
+      "reported_gsm8k": 92.4,
+      "perturbed_gsm8k": 48.6,
+      "z_score": 3.42,
+      "status": "Contaminated",
+      "notes": "Severe performance collapse (-43.8%) on numerical perturbation confirms test-set memorization."
+    },
+    {
+      "model": "Model-Zeta (MathSpecialist 8B)",
+      "family": "Fine-Tuned Open",
+      "ngram_overlap_pct": 28.7,
+      "delta_ppl": -3.9,
+      "reported_gsm8k": 88.5,
+      "perturbed_gsm8k": 54.1,
+      "z_score": 2.85,
+      "status": "Contaminated",
+      "notes": "Anomalous perplexity drop on exact benchmark strings; poor general symbolic deduction."
+    },
+    {
+      "model": "DeepSeek-R1",
+      "family": "Reasoning-RL",
+      "ngram_overlap_pct": 4.1,
+      "delta_ppl": -0.3,
+      "reported_gsm8k": 97.3,
+      "perturbed_gsm8k": 95.8,
+      "z_score": 0.41,
+      "status": "Clean",
+      "notes": "Consistent multi-step chain-of-thought traces with minimal delta on perturbed operands."
+    },
+    {
+      "model": "Claude 3.5 Sonnet",
+      "family": "Proprietary",
+      "ngram_overlap_pct": 3.8,
+      "delta_ppl": -0.2,
+      "reported_gsm8k": 96.4,
+      "perturbed_gsm8k": 95.1,
+      "z_score": 0.35,
+      "status": "Clean",
+      "notes": "Passes n-gram prefix memorization test with standard entropy distribution."
+    },
+    {
+      "model": "GPT-4o",
+      "family": "Proprietary",
+      "ngram_overlap_pct": 5.2,
+      "delta_ppl": -0.4,
+      "reported_gsm8k": 95.8,
+      "perturbed_gsm8k": 94.2,
+      "z_score": 0.52,
+      "status": "Clean",
+      "notes": "Robust generalized arithmetic performance within 95% confidence tolerance."
+    },
+    {
+      "model": "Llama 3.3 70B",
+      "family": "Open-Weights",
+      "ngram_overlap_pct": 6.8,
+      "delta_ppl": -0.6,
+      "reported_gsm8k": 92.4,
+      "perturbed_gsm8k": 89.9,
+      "z_score": 0.72,
+      "status": "Clean",
+      "notes": "Generalizes reliably across diverse phrasing templates."
+    },
+    {
+      "model": "Qwen 2.5 72B",
+      "family": "Open-Weights",
+      "ngram_overlap_pct": 7.4,
+      "delta_ppl": -0.8,
+      "reported_gsm8k": 93.1,
+      "perturbed_gsm8k": 90.7,
+      "z_score": 0.88,
+      "status": "Clean",
+      "notes": "Standard linguistic variance without anomalous test-set clustering."
+    }
+  ],
+  "simpsons_paradox": {
+    "domains": ["Overall Macro", "Law & Jurisprudence", "Clinical Medicine", "Abstract Math", "Computer Science", "Humanities"],
+    "model_alpha": {
+      "name": "Model Alpha (Balanced Architecture)",
+      "scores": [76.5, 78.4, 75.2, 74.8, 81.0, 73.1],
+      "weights": [1.0, 0.15, 0.15, 0.25, 0.25, 0.20]
+    },
+    "model_beta": {
+      "name": "Model Beta (Uncalibrated Challenger)",
+      "scores": [77.9, 66.0, 68.4, 72.5, 91.2, 85.5],
+      "weights": [1.0, 0.15, 0.15, 0.25, 0.25, 0.20]
+    },
+    "stratified_reweighted": {
+      "model_alpha": 76.5,
+      "model_beta": 74.8,
+      "finding": "Simpson's Paradox demonstrated: Model Beta boasts a +1.4% macro score solely by dominating non-critical coding syntax, but regresses by -12.4% in Legal and -6.8% in Medical reasoning. Standardizing domain weights reverses the ranking."
+    }
+  }
+}

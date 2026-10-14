@@ -1,0 +1,61 @@
+{
+  "models": [
+    "DeepSeek-R1",
+    "Claude 3.5 Sonnet",
+    "GPT-4o",
+    "DeepSeek-V3",
+    "Llama 3.3 70B",
+    "Gemini 1.5 Pro"
+  ],
+  "elo_ratings": [
+    { "model": "DeepSeek-R1", "elo": 1342, "ci_lower": 1325, "ci_upper": 1360, "rank": 1 },
+    { "model": "Claude 3.5 Sonnet", "elo": 1318, "ci_lower": 1302, "ci_upper": 1334, "rank": 2 },
+    { "model": "GPT-4o", "elo": 1286, "ci_lower": 1271, "ci_upper": 1301, "rank": 3 },
+    { "model": "DeepSeek-V3", "elo": 1272, "ci_lower": 1256, "ci_upper": 1288, "rank": 4 },
+    { "model": "Llama 3.3 70B", "elo": 1228, "ci_lower": 1211, "ci_upper": 1245, "rank": 5 },
+    { "model": "Gemini 1.5 Pro", "elo": 1240, "ci_lower": 1224, "ci_upper": 1256, "rank": 6 }
+  ],
+  "win_matrix": [
+    [50.0, 53.4, 58.2, 60.1, 66.8, 64.5],
+    [46.6, 50.0, 54.8, 57.2, 63.5, 61.8],
+    [41.8, 45.2, 50.0, 52.4, 59.2, 57.6],
+    [39.9, 42.8, 47.6, 50.0, 56.4, 54.9],
+    [33.2, 36.5, 40.8, 43.6, 50.0, 48.2],
+    [35.5, 38.2, 42.4, 45.1, 51.8, 50.0]
+  ],
+  "length_bias_audit": {
+    "token_diff_bins": ["-400 tokens", "-200 tokens", "Equal Length (±50)", "+200 tokens", "+400 tokens", "+600 tokens"],
+    "raw_judge_win_rate": [38.2, 44.5, 50.1, 56.8, 62.4, 67.5],
+    "debiased_win_rate": [49.1, 49.8, 50.0, 50.4, 50.9, 51.2],
+    "human_gold_standard": [48.7, 49.5, 50.2, 50.3, 50.8, 51.0]
+  },
+  "radar_capabilities": {
+    "dimensions": ["Reasoning", "Math", "Coding", "Instruction", "Safety", "Hallucination Resistance"],
+    "models": [
+      {
+        "name": "Claude 3.5 Sonnet",
+        "color": "rgba(6, 182, 212, 1)",
+        "fill": "rgba(6, 182, 212, 0.2)",
+        "scores": [94, 92, 98, 96, 92, 90]
+      },
+      {
+        "name": "DeepSeek-R1",
+        "color": "rgba(129, 140, 248, 1)",
+        "fill": "rgba(129, 140, 248, 0.2)",
+        "scores": [98, 99, 96, 90, 85, 88]
+      },
+      {
+        "name": "GPT-4o",
+        "color": "rgba(16, 185, 129, 1)",
+        "fill": "rgba(16, 185, 129, 0.2)",
+        "scores": [91, 89, 92, 95, 94, 91]
+      },
+      {
+        "name": "Llama 3.3 70B",
+        "color": "rgba(245, 158, 11, 1)",
+        "fill": "rgba(245, 158, 11, 0.2)",
+        "scores": [85, 84, 86, 91, 88, 86]
+      }
+    ]
+  }
+}
