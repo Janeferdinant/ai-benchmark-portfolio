@@ -330,6 +330,169 @@ document.addEventListener('DOMContentLoaded', async () => {
   simConfidenceSelect.addEventListener('change', updateSimulator);
   simVarianceSlider.addEventListener('input', updateSimulator);
 
+  // 7. Interactive SME Chart Interpretation & Anomaly Sandbox
+  const sandboxScenarios = {
+    ceiling: {
+      badgeClass: 'amber',
+      badgeText: 'Statistically Inconclusive • Ceiling Effect',
+      title: 'Ceiling Saturation: Score Delta Δ = +0.6% (z = 1.08, p = 0.28)',
+      analysis: '<strong>Diagnostic Analysis:</strong> At 97% accuracy on GSM8K (N = 1,319), the benchmark suffers severe compression. The apparent +0.6% delta represents a difference of only <strong>8 test items</strong>. Non-parametric bootstrap resampling (B = 10,000) reveals overlapping 95% confidence intervals: Model A [95.9%, 97.7%] vs. Model B [96.6%, 98.2%]. A paired two-tailed z-test confirms the difference is indistinguishable from random sampling noise (p = 0.28 > α = 0.05). Deploying Model B based on this chart would increase inference cost without guaranteed capability improvement.',
+      action: '<strong>Recommended SME Action:</strong> Reject marketing superiority claims. Mandate migration to non-saturated frontier evaluation suites (MATH-500, OlympicArena) and implement Item Response Theory (IRT) parameterization to weigh questions by discriminant difficulty.'
+    },
+    contamination: {
+      badgeClass: 'red',
+      badgeText: 'Critical Anomaly • Pretraining Leakage',
+      title: 'Contamination Collapse: Δ = -36.6% on Numerical Perturbations',
+      analysis: '<strong>Diagnostic Analysis:</strong> FineTuned-Math-X exhibits an impressive 91.2% accuracy on the canonical GSM8K test set. However, upon applying <strong>semantic-preserving operand perturbation</strong> (e.g., swapping values: "John has 12 apples" → "John has 17 apples"), accuracy plummets by <strong>-36.6% down to 54.6%</strong>. In contrast, genuine generalizers (Qwen-2.5-Math, Llama-3-70B) experience minimal drift (≤ 1.8%). Token perplexity discrepancy (ΔPPL = -1.42) and 8-gram verbatim memorization confirm test set contamination in the fine-tuning mixture.',
+      action: '<strong>Recommended SME Action:</strong> Disqualify canonical benchmark score from leaderboard reports. Run Bloom filter 13-gram decontamination across training datasets and enforce dynamic synthetic evaluation pipelines (GSM-Symbolic, SVAMP) prior to production release.'
+    },
+    length_bias: {
+      badgeClass: 'green',
+      badgeText: 'Protocol Verified • Confounder Mitigated',
+      title: 'Verbosity Confounder Solved: Inter-Rater Reliability κ = 0.89',
+      analysis: '<strong>Diagnostic Analysis:</strong> Uncalibrated LLM-as-a-Judge evaluators exhibit a massive confounding verbosity bias (r = 0.84, R² = 0.92). When presented with semantically identical answers, the longer response wins <strong>84.1%</strong> of the time when word count exceeds 600 words, compared to only <strong>31.2%</strong> when concise. This causes an artificial +210 Elo inflation for verbose models and degrades agreement with human expert raters down to Cohen\'s κ = 0.41.',
+      action: '<strong>Recommended SME Action:</strong> Deploy Jane\'s Length-Penalized Bradley-Terry maximum likelihood estimator with bidirectional position swapping: P(i ≻ j) = σ(θ_i - θ_j + β_len · Δlen). This completely flattens the verbosity artifact (win rate 49.2%–51.1%) and restores human-judge consensus to κ = 0.89.'
+    }
+  };
+
+  const sandboxVerdictContainer = document.getElementById('sandbox-verdict');
+  const sandboxScenarioButtons = document.querySelectorAll('#sandbox-scenarios .sandbox-pill-btn');
+
+  function updateSandboxScenario(scenarioKey) {
+    const data = sandboxScenarios[scenarioKey];
+    if (!data || !sandboxVerdictContainer) return;
+
+    sandboxScenarioButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.scenario === scenarioKey);
+    });
+
+    sandboxVerdictContainer.innerHTML = `
+      <div class="verdict-header-row">
+        <span class="verdict-badge ${data.badgeClass}">${data.badgeText}</span>
+      </div>
+      <h4 class="verdict-title">${data.title}</h4>
+      <div class="verdict-analysis-body">${data.analysis}</div>
+      <div class="verdict-action-box">${data.action}</div>
+    `;
+
+    ChartsModule.renderSandboxScenario(scenarioKey);
+  }
+
+  sandboxScenarioButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      updateSandboxScenario(btn.dataset.scenario);
+    });
+  });
+
+  // 8. Color Gradient Theme Spectrum Controller
+  const themeSwatches = document.querySelectorAll('.theme-swatch-btn');
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'cyber-prism';
+
+  function applyTheme(themeId) {
+    document.documentElement.setAttribute('data-theme', themeId);
+    localStorage.setItem('portfolio-theme', themeId);
+
+    themeSwatches.forEach(btn => {
+      const isActive = btn.dataset.themeId === themeId;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-checked', isActive ? 'true' : 'false');
+    });
+  }
+
+  themeSwatches.forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyTheme(btn.dataset.themeId);
+    });
+  });
+
+  applyTheme(savedTheme);
+
+  // 9. 3D Project Card Tilt & Specular Glare Motion Graphics
+  const projectCards = document.querySelectorAll('.foundational-project-card');
+  projectCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const deltaX = (x - centerX) / centerX; // -1 to 1
+      const deltaY = (y - centerY) / centerY; // -1 to 1
+
+      const tiltX = -deltaY * 8; // degrees
+      const tiltY = deltaX * 8;
+
+      card.style.transform = `perspective(1000px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg) translateZ(10px)`;
+      card.style.setProperty('--mouse-x', `${((x / rect.width) * 100).toFixed(1)}%`);
+      card.style.setProperty('--mouse-y', `${((y / rect.height) * 100).toFixed(1)}%`);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+    });
+  });
+
+  // 10. 3D 4K Modal Lightbox Inspection
+  const modal = document.getElementById('project3dModal');
+  const modalCloseBtn = document.getElementById('modalCloseBtn');
+  const modalImg = document.getElementById('modal3dImg');
+  const modalTitle = document.getElementById('modal3dTitle');
+  const modalCategory = document.getElementById('modal3dCategory');
+  const modalDesc = document.getElementById('modal3dDesc');
+  const modalTags = document.getElementById('modal3dTags');
+
+  function openProjectModal(card) {
+    if (!modal) return;
+    const title = card.getAttribute('data-3d-title') || '';
+    const img = card.getAttribute('data-3d-img') || '';
+    const category = card.getAttribute('data-3d-category') || '';
+    const desc = card.getAttribute('data-3d-desc') || '';
+    const tags = (card.getAttribute('data-3d-tags') || '').split(',');
+
+    modalTitle.textContent = title;
+    modalImg.src = img;
+    modalImg.alt = title;
+    modalCategory.textContent = category;
+    modalDesc.textContent = desc;
+
+    modalTags.innerHTML = tags.map(t => `<span class="foundational-tag">${t.trim()}</span>`).join('');
+
+    modal.hidden = false;
+    requestAnimationFrame(() => modal.classList.add('active'));
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeProjectModal() {
+    if (!modal) return;
+    modal.classList.remove('active');
+    setTimeout(() => {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+    }, 300);
+  }
+
+  projectCards.forEach(card => {
+    card.addEventListener('click', () => openProjectModal(card));
+  });
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeProjectModal);
+  }
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeProjectModal();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && !modal.hidden) {
+      closeProjectModal();
+    }
+  });
+
   // Initialize All Charts
   updateFrontierChart();
   ChartsModule.renderContaminationChart(DataStore.contamination.contamination_cases);
@@ -338,4 +501,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   ChartsModule.renderRadarChart(DataStore.pairwiseElo.radar_capabilities);
   renderEloHeatmap();
   updateSimulator();
+  updateSandboxScenario('ceiling');
 });

@@ -69,6 +69,41 @@
     </div>
   </header>
 
+  <!-- Interactive Color Gradient Spectrum Ribbon (All Color Themes Accessible in Same Screen) -->
+  <div class="theme-spectrum-ribbon" id="theme-spectrum-bar" role="region" aria-label="Color Gradient Theme Palette Selector">
+    <div class="container theme-spectrum-inner">
+      <div class="theme-spectrum-label-wrap">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10"/>
+        </svg>
+        <span>Color Theme Spectrum:</span>
+      </div>
+      <div class="theme-swatches-grid" role="radiogroup" aria-label="Accessible Color Themes">
+        <button class="theme-swatch-btn active" data-theme-id="cyber-prism" role="radio" aria-checked="true" title="Cyber Prism (Cyan / Indigo / Violet)">
+          <span class="swatch-pip" style="background: linear-gradient(135deg, #06b6d4, #6366f1, #a855f7);"></span>
+          <span>Cyber Prism (Default)</span>
+        </button>
+        <button class="theme-swatch-btn" data-theme-id="quantum-emerald" role="radio" aria-checked="false" title="Quantum Emerald (Emerald / Mint / Cyan)">
+          <span class="swatch-pip" style="background: linear-gradient(135deg, #10b981, #14b8a6, #06b6d4);"></span>
+          <span>Quantum Emerald</span>
+        </button>
+        <button class="theme-swatch-btn" data-theme-id="solar-flare" role="radio" aria-checked="false" title="Solar Supernova (Amber / Orange / Crimson)">
+          <span class="swatch-pip" style="background: linear-gradient(135deg, #f59e0b, #f97316, #ef4444);"></span>
+          <span>Solar Supernova</span>
+        </button>
+        <button class="theme-swatch-btn" data-theme-id="aurora-borealis" role="radio" aria-checked="false" title="Aurora Borealis (Rose / Violet / Sky)">
+          <span class="swatch-pip" style="background: linear-gradient(135deg, #ec4899, #8b5cf6, #38bdf8);"></span>
+          <span>Aurora Borealis</span>
+        </button>
+        <button class="theme-swatch-btn" data-theme-id="prism-flow" role="radio" aria-checked="false" title="Dynamic Multi-Gradient Flow with Ambient Pulse">
+          <span class="swatch-pip animated-prism-pip"></span>
+          <span>Prism Flow Motion ★</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Hero Section -->
   <section class="hero-section" id="hero">
     <div class="hero-background-glow" aria-hidden="true"></div>
@@ -161,6 +196,149 @@
           <div class="kpi-value">&lt; 0.001</div>
           <div class="kpi-label">Hypothesis Significance Threshold</div>
           <div class="kpi-subtext">Bonferroni-corrected multiple testing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Vacancy Custom Alignment Section -->
+  <section class="content-section" style="padding-top: var(--space-8); padding-bottom: 0;">
+    <div class="container">
+      <div class="role-alignment-box">
+        <div class="role-alignment-header">
+          <div>
+            <div class="job-posting-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Role Specification Match • 100% Verified
+            </div>
+            <h2 class="role-title-heading">Custom-Engineered for: Subject Matter Expert – Data & Statistical Chart Analysis</h2>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 850px; margin-top: 6px;">
+              Direct architectural mapping between Quik Hire Staffing's client job specifications and Jane Rose Ferdinant's demonstrated benchmark frameworks, interactive visualizations, and statistical methodologies.
+            </p>
+          </div>
+          <a href="https://ai-benchmark-portfolio.vercel.app/Jane_Rose_AI_Benchmark_Portfolio.pdf" download="Jane_Rose_AI_Benchmark_Portfolio.pdf" class="btn-download-pdf" title="Download matching dossier">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            Download Tailored PDF Dossier
+          </a>
+        </div>
+
+        <div class="role-alignment-grid">
+          <!-- Item 1 -->
+          <div class="alignment-card">
+            <span class="alignment-badge">Key Responsibility 01</span>
+            <h3 class="alignment-req-title">Evaluate & Interpret Statistical Data & Visual Charts</h3>
+            <p class="alignment-proof-body">
+              Engineered multi-objective <strong>Pareto Frontier Visualizations</strong> across 18+ models and 4 benchmark suites. Computes <strong>95% non-parametric bootstrap confidence intervals ($B = 10,000$)</strong> and error ellipses to prevent misinterpreting stochastic sampling noise as true model improvement.
+            </p>
+            <div class="alignment-card-footer">
+              <span class="match-pill">100% Demonstrated</span>
+              <a href="#benchmarks" class="alignment-jump-link">Inspect Pareto Engine →</a>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="alignment-card">
+            <span class="alignment-badge">Key Responsibility 02</span>
+            <h3 class="alignment-req-title">Analyze Trends, Anomalies & Correlations in Datasets</h3>
+            <p class="alignment-proof-body">
+              Built forensic anomaly detection tools combining <strong>Perplexity Discrepancy ($\Delta \text{PPL}$)</strong> and 8-gram memorization to isolate test set contamination ($Z > 2.5$). Solved <strong>Simpson's Paradox</strong> in sub-domain reasoning to uncover masked -12.4% regressions.
+            </p>
+            <div class="alignment-card-footer">
+              <span class="match-pill">100% Demonstrated</span>
+              <a href="#contamination" class="alignment-jump-link">View Anomaly Suite →</a>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="alignment-card">
+            <span class="alignment-badge">Key Responsibility 03</span>
+            <h3 class="alignment-req-title">Validate Data Integrity & Consistency Across Reports</h3>
+            <p class="alignment-proof-body">
+              Modeled pairwise battles via <strong>Bradley-Terry Maximum Likelihood</strong> across 14,500 matches. Eliminated order and length biases using ridge regression penalty functions, raising human-judge inter-rater reliability to <strong>Cohen's $\kappa = 0.89$</strong>.
+            </p>
+            <div class="alignment-card-footer">
+              <span class="match-pill">100% Demonstrated</span>
+              <a href="#elo-matrix" class="alignment-jump-link">Review Elo Matrix →</a>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="alignment-card">
+            <span class="alignment-badge">Key Responsibility 04</span>
+            <h3 class="alignment-req-title">Refine Benchmarking Methodologies with Teams</h3>
+            <p class="alignment-proof-body">
+              Author of comprehensive <strong>AI Evaluation Governance Standards</strong> (<a href="docs/METHODOLOGY.md" style="color:var(--accent-cyan);">docs/METHODOLOGY.md</a>) defining Bonferroni/FDR multiple testing corrections, adversarial dynamic paraphrasing, and stratified population weighting.
+            </p>
+            <div class="alignment-card-footer">
+              <span class="match-pill">100% Demonstrated</span>
+              <a href="docs/METHODOLOGY.md" target="_blank" class="alignment-jump-link">Read Standards Doc →</a>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="alignment-card">
+            <span class="alignment-badge">Key Responsibility 05</span>
+            <h3 class="alignment-req-title">Present Findings to Technical & Non-Technical Stakeholders</h3>
+            <p class="alignment-proof-body">
+              Engineered the <strong>Dual Audience Lens Switcher</strong> ("Executive Summary" vs. "SME Deep Dive") allowing immediate real-time translation between business ROI/latency trade-offs and mathematical hypothesis rejection thresholds.
+            </p>
+            <div class="alignment-card-footer">
+              <span class="match-pill">100% Demonstrated</span>
+              <button onclick="document.getElementById('btn-lens-exec').click();" class="alignment-jump-link" style="background:none; border:none; cursor:pointer;">Test Lens Switcher ↗</button>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="alignment-card">
+            <span class="alignment-badge">Core Qualification 06</span>
+            <h3 class="alignment-req-title">Statistical Experimentation & Sample Sizing Laboratory</h3>
+            <p class="alignment-proof-body">
+              Built an interactive pedagogical simulator allowing teams to compute exact <strong>Margins of Error (MOE)</strong>, two-tailed $p$-values, statistical power ($1 - \beta$), and required prompt sample sizes ($N$) for high-confidence model releases.
+            </p>
+            <div class="alignment-card-footer">
+              <span class="match-pill">100% Demonstrated</span>
+              <a href="#simulator" class="alignment-jump-link">Open Simulator →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive SME Assessment: Live Chart Interpretation & Anomaly Sandbox -->
+        <div class="chart-audit-sandbox" id="audit-sandbox">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-4);">
+            <div>
+              <span class="alignment-badge" style="color: var(--accent-emerald);">Interactive Recruiter / Hiring Assessment</span>
+              <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-top: 4px;">
+                SME Work Sample: Real-Time Chart Interpretation & Anomaly Diagnostic Sandbox
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); max-width: 780px; margin-top: 4px;">
+                Demonstrating core competency in identifying misleading benchmark charts, data leakage, and statistical artifacts. Select a real-world evaluation failure scenario below:
+              </p>
+            </div>
+          </div>
+
+          <div class="sandbox-nav-pills" id="sandbox-scenarios">
+            <button class="sandbox-pill-btn active" data-scenario="ceiling" id="btn-scenario-ceiling">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+              Scenario 1: Benchmark Saturation & Ceiling Effect
+            </button>
+            <button class="sandbox-pill-btn" data-scenario="contamination" id="btn-scenario-contamination">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              Scenario 2: Perturbation Contamination Collapse
+            </button>
+            <button class="sandbox-pill-btn" data-scenario="length_bias" id="btn-scenario-length">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              Scenario 3: Verbosity Bias in LLM-as-a-Judge
+            </button>
+          </div>
+
+          <div class="diagnostic-display-grid">
+            <div class="diagnostic-chart-wrap">
+              <canvas id="sandboxChart"></canvas>
+            </div>
+            <div class="diagnostic-verdict-card" id="sandbox-verdict">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -604,10 +782,12 @@
       </div>
 
       <div class="foundational-grid-container">
-        <!-- Project 1: Pepper Vision -->
-        <article class="foundational-project-card">
+        <!-- Project 1: Pepper Vision (3D 4K Render) -->
+        <article class="foundational-project-card" data-3d-title="Harvestable Black Pepper Recognition" data-3d-img="assets/pepper_vision_3d.jpg" data-3d-category="Computer Vision • Published IEEE Research" data-3d-desc="Customized ResNet50 deep learning model to detect and classify ripeness stages of harvestable black pepper berries in agricultural field environments with robotic vision integration. Published in IEEE Xplore / ICACC 2019." data-3d-tags="ResNet50,OpenCV,Deep Learning,Precision Ag,Robotics Vision,PyTorch">
+          <div class="card-glare-layer"></div>
           <div class="foundational-img-wrap">
-            <img src="assets/pepper_vision.jpg" alt="Harvestable Black Pepper Recognition" class="foundational-img">
+            <span class="badge-3d-4k"><span class="render-spark"></span>3D • 4K RENDER</span>
+            <img src="assets/pepper_vision_3d.jpg" alt="Harvestable Black Pepper Recognition 3D 4K Render" class="foundational-img" loading="lazy">
           </div>
           <div class="foundational-body">
             <span class="foundational-category" style="color: #10b981;">Computer Vision • Published IEEE Research</span>
@@ -624,10 +804,12 @@
           </div>
         </article>
 
-        <!-- Project 2: Stock Market Prediction -->
-        <article class="foundational-project-card">
+        <!-- Project 2: Stock Market Prediction (3D 4K Render) -->
+        <article class="foundational-project-card" data-3d-title="Stock Market & Volatility Forecasting" data-3d-img="assets/stock_prediction_3d.jpg" data-3d-category="Time Series • Financial Risk Modeling" data-3d-desc="Long Short-Term Memory (LSTM) recurrent networks coupled with Deep Reinforcement Learning for financial time-series forecasting, risk modeling, multi-asset volatility simulation, and high-frequency predictive analytics." data-3d-tags="LSTM,Deep RL,Time Series,Financial Risk,Python,TensorFlow">
+          <div class="card-glare-layer"></div>
           <div class="foundational-img-wrap">
-            <img src="assets/stock_prediction.jpg" alt="Stock Market Prediction" class="foundational-img">
+            <span class="badge-3d-4k"><span class="render-spark"></span>3D • 4K RENDER</span>
+            <img src="assets/stock_prediction_3d.jpg" alt="Stock Market Prediction 3D 4K Render" class="foundational-img" loading="lazy">
           </div>
           <div class="foundational-body">
             <span class="foundational-category" style="color: #06b6d4;">Time Series • Financial Risk Modeling</span>
@@ -644,10 +826,12 @@
           </div>
         </article>
 
-        <!-- Project 3: COVID-19 Pneumonia Detection -->
-        <article class="foundational-project-card">
+        <!-- Project 3: COVID-19 Pneumonia Detection (3D 4K Render) -->
+        <article class="foundational-project-card" data-3d-title="COVID-19 & Pneumonia Automated Detection" data-3d-img="assets/pneumonia_xray_3d.jpg" data-3d-category="Medical AI • Diagnostic Imaging" data-3d-desc="Convolutional Neural Network (CNN) with transfer learning and Grad-CAM attention heatmap interpretability for rapid, automated pneumonia opacity detection and lung lesion classification from digital chest X-ray radiographs." data-3d-tags="CNN,Transfer Learning,Grad-CAM,Medical AI,PyTorch,DICOM">
+          <div class="card-glare-layer"></div>
           <div class="foundational-img-wrap">
-            <img src="assets/pneumonia_xray.jpg" alt="COVID-19 Pneumonia Detection" class="foundational-img">
+            <span class="badge-3d-4k"><span class="render-spark"></span>3D • 4K RENDER</span>
+            <img src="assets/pneumonia_xray_3d.jpg" alt="COVID-19 Pneumonia Detection 3D 4K Render" class="foundational-img" loading="lazy">
           </div>
           <div class="foundational-body">
             <span class="foundational-category" style="color: #f59e0b;">Medical AI • Diagnostic Imaging</span>
@@ -664,10 +848,12 @@
           </div>
         </article>
 
-        <!-- Project 4: E-Commerce Recommender -->
-        <article class="foundational-project-card">
+        <!-- Project 4: E-Commerce Recommender (3D 4K Render) -->
+        <article class="foundational-project-card" data-3d-title="E-Commerce Personalization Engine" data-3d-img="assets/ecommerce_recommender_3d.jpg" data-3d-category="Recommendation Systems • Collaborative Filtering" data-3d-desc="Graph Neural Network (GNN) collaborative filtering and matrix factorization recommendation engine built to resolve cold-start dilemmas, map user-item embeddings, and optimize real-time click-through rates." data-3d-tags="Collaborative Filtering,Matrix Factorization,Graph Embeddings,Scikit-Learn,FastAPI">
+          <div class="card-glare-layer"></div>
           <div class="foundational-img-wrap">
-            <img src="assets/ecommerce_recommender.jpg" alt="E-Commerce Recommendation" class="foundational-img">
+            <span class="badge-3d-4k"><span class="render-spark"></span>3D • 4K RENDER</span>
+            <img src="assets/ecommerce_recommender_3d.jpg" alt="E-Commerce Recommendation 3D 4K Render" class="foundational-img" loading="lazy">
           </div>
           <div class="foundational-body">
             <span class="foundational-category" style="color: #38bdf8;">Recommendation Systems • Collaborative Filtering</span>
@@ -683,10 +869,12 @@
           </div>
         </article>
 
-        <!-- Project 5: Interactive BI Dashboards -->
-        <article class="foundational-project-card">
+        <!-- Project 5: Interactive BI Dashboards (3D 4K Render) -->
+        <article class="foundational-project-card" data-3d-title="Executive BI & Analytics Dashboards" data-3d-img="assets/interactive_dashboard_3d.jpg" data-3d-category="Business Intelligence • KPI Tracking" data-3d-desc="Mission-control multi-source telemetry data pipelines feeding executive dashboards in Power BI, Tableau, and Python/SQL for real-time latency monitoring, model degradation tracking, and business intelligence." data-3d-tags="Power BI,Tableau,SQL,Python,Kafka,Airflow">
+          <div class="card-glare-layer"></div>
           <div class="foundational-img-wrap">
-            <img src="assets/interactive_dashboard.jpg" alt="Interactive Dashboards" class="foundational-img">
+            <span class="badge-3d-4k"><span class="render-spark"></span>3D • 4K RENDER</span>
+            <img src="assets/interactive_dashboard_3d.jpg" alt="Interactive Dashboards 3D 4K Render" class="foundational-img" loading="lazy">
           </div>
           <div class="foundational-body">
             <span class="foundational-category" style="color: #e7c58b;">Business Intelligence • KPI Tracking</span>
@@ -814,6 +1002,27 @@
       </div>
     </div>
   </footer>
+
+  <!-- 3D 4K Project Inspection Lightbox Modal -->
+  <div class="modal-3d-lightbox" id="project3dModal" role="dialog" aria-modal="true" aria-labelledby="modal3dTitle" hidden>
+    <div class="modal-3d-content">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close 3D inspection view">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-3d-img-wrap">
+        <img src="" alt="" id="modal3dImg" class="modal-3d-img">
+      </div>
+      <div class="modal-3d-details">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+          <span class="badge-3d-4k"><span class="render-spark"></span>3D • 4K HIGH FIDELITY RENDER</span>
+          <span id="modal3dCategory" style="font-size:0.75rem; font-weight:700; color:var(--accent-cyan); text-transform:uppercase;"></span>
+        </div>
+        <h3 id="modal3dTitle" style="font-size:1.4rem; color:var(--text-primary); margin-bottom:8px;"></h3>
+        <p id="modal3dDesc" style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6; margin-bottom:16px;"></p>
+        <div id="modal3dTags" class="foundational-tags"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="js/data-store.js"></script>

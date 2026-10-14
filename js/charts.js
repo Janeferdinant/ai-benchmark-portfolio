@@ -10,6 +10,7 @@ const ChartsModule = {
   lengthBiasChartInstance: null,
   radarChartInstance: null,
   simDistributionChartInstance: null,
+  sandboxChartInstance: null,
 
   // Global Chart.js dark theme defaults
   setupChartDefaults() {
@@ -475,5 +476,181 @@ const ChartsModule = {
         }
       }
     });
+  },
+
+  /**
+   * Render Chart 7: Interactive SME Diagnostic Sandbox
+   */
+  renderSandboxScenario(scenarioKey) {
+    const canvas = document.getElementById('sandboxChart');
+    if (!canvas) return;
+
+    if (this.sandboxChartInstance) {
+      this.sandboxChartInstance.destroy();
+    }
+
+    const ctx = canvas.getContext('2d');
+
+    if (scenarioKey === 'ceiling') {
+      this.sandboxChartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Model A (Baseline)', 'Model B (Competitor)', 'Model A (CoT Variant)', 'Human Baseline'],
+          datasets: [
+            {
+              label: 'Reported Accuracy (%)',
+              data: [96.8, 97.4, 97.1, 95.0],
+              backgroundColor: ['#06b6d4', '#f59e0b', '#3b82f6', '#10b981'],
+              borderRadius: 6,
+              borderWidth: 1,
+              borderColor: '#1e2942'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => {
+                  const cis = {
+                    0: '95% CI: [95.9%, 97.7%] (SE: ±0.46%)',
+                    1: '95% CI: [96.6%, 98.2%] (SE: ±0.41%)',
+                    2: '95% CI: [96.2%, 98.0%] (SE: ±0.44%)',
+                    3: 'Standardized Human Benchmark'
+                  };
+                  return [`Score: ${ctx.raw}%`, cis[ctx.dataIndex] || ''];
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              min: 90,
+              max: 100,
+              title: { display: true, text: 'GSM8K Test Accuracy (%)', color: '#94a3b8' },
+              grid: { color: 'rgba(255, 255, 255, 0.06)' }
+            },
+            x: {
+              grid: { display: false }
+            }
+          }
+        }
+      });
+    } else if (scenarioKey === 'contamination') {
+      this.sandboxChartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Llama-3-70B', 'FineTuned-Math-X', 'DeepSeek-Math-7B', 'Qwen-2.5-Math'],
+          datasets: [
+            {
+              label: 'Canonical Benchmark (Clean)',
+              data: [82.5, 91.2, 84.1, 88.0],
+              backgroundColor: '#3b82f6',
+              borderRadius: 4
+            },
+            {
+              label: 'Operand Perturbed (GSM-Symbolic)',
+              data: [80.9, 54.6, 81.5, 86.2],
+              backgroundColor: '#ef4444',
+              borderRadius: 4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top',
+              labels: { boxWidth: 10, color: '#94a3b8' }
+            },
+            tooltip: {
+              callbacks: {
+                afterBody: (items) => {
+                  const idx = items[0].dataIndex;
+                  const drops = ['-1.6% (Robust)', '-36.6% (CONTAMINATION COLLAPSE)', '-2.6% (Robust)', '-1.8% (Robust)'];
+                  return `\nGeneralization Drift: ${drops[idx]}`;
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              min: 40,
+              max: 100,
+              title: { display: true, text: 'Mathematical Accuracy (%)', color: '#94a3b8' },
+              grid: { color: 'rgba(255, 255, 255, 0.06)' }
+            },
+            x: {
+              grid: { display: false }
+            }
+          }
+        }
+      });
+    } else if (scenarioKey === 'length_bias') {
+      this.sandboxChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['< 150 words', '150 - 300 words', '300 - 450 words', '450 - 600 words', '> 600 words'],
+          datasets: [
+            {
+              label: 'Raw LLM-as-a-Judge Win Rate (%)',
+              data: [31.2, 42.5, 54.8, 68.4, 84.1],
+              borderColor: '#ef4444',
+              backgroundColor: 'rgba(239, 68, 68, 0.1)',
+              fill: true,
+              tension: 0.35,
+              pointRadius: 5,
+              pointBackgroundColor: '#ef4444',
+              borderWidth: 2
+            },
+            {
+              label: "Debiased Bradley-Terry Win Rate (%)",
+              data: [49.2, 50.4, 49.8, 51.1, 50.2],
+              borderColor: '#10b981',
+              backgroundColor: 'rgba(16, 185, 129, 0.1)',
+              fill: true,
+              tension: 0.35,
+              pointRadius: 5,
+              pointBackgroundColor: '#10b981',
+              borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top',
+              labels: { boxWidth: 10, color: '#94a3b8' }
+            },
+            tooltip: {
+              callbacks: {
+                title: (items) => `Answer Length: ${items[0].label}`,
+                afterBody: () => '\nEvaluation on semantically identical response pairs'
+              }
+            }
+          },
+          scales: {
+            y: {
+              min: 20,
+              max: 100,
+              title: { display: true, text: 'Evaluator Win Rate (%)', color: '#94a3b8' },
+              grid: { color: 'rgba(255, 255, 255, 0.06)' }
+            },
+            x: {
+              title: { display: true, text: 'Model Output Length Range', color: '#94a3b8' },
+              grid: { color: 'rgba(255, 255, 255, 0.04)' }
+            }
+          }
+        }
+      });
+    }
   }
 };
