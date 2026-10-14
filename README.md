@@ -1,6 +1,7 @@
 # Jane Rose | AI Benchmark & Statistical Chart Analysis SME Portfolio
 
-[![Live Deployment](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://janeferdinant-ai-benchmark.vercel.app)
+[![Live Deployment](https://img.shields.io/badge/Vercel-Live_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-benchmark-portfolio.vercel.app)
+[![Download PDF Dossier](https://img.shields.io/badge/Download_PDF-Portfolio_Dossier-ef4444?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://ai-benchmark-portfolio.vercel.app/Jane_Rose_AI_Benchmark_Portfolio.pdf)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Janeferdinant/ai-benchmark-portfolio)
 [![Evaluation Standard](https://img.shields.io/badge/Statistical_Standard-95%25_Bootstrap_CI-06b6d4?style=for-the-badge)](docs/METHODOLOGY.md)
 
